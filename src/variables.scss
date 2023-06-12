@@ -1,0 +1,19 @@
+@mixin font-large-bold {
+  font-size: $font-size-l;
+  font-weight: bold;
+  color: $base-color;
+}
+
+$base-color: #000000d7;
+$subtitle-color: #b2b7b9;
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$spacing-xs: 12px;
+$spacing-s: 14px;
+$spacing-m: 16px;
+$spacing-l: 18px;
+$tile-background: #f6f9fb;
+$tile-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+
