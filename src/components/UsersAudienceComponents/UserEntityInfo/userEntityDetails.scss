@@ -1,16 +1,10 @@
-@import '../../variables.scss';
+@import '../../../variables.scss';
 .user-details-container {
 	padding-left: $spacing-l;
 	width: 65%;
 	.user-id-container {
 		margin: $spacing-m 0;
 		padding: $spacing-m;
-		.user-id-details {
-      @include font-large-bold;
-		}
-		.user-id-created {
-			font-size: $font-size-xs;
-		}
 	}
 	.user-tile-container {
 		display: flex;
@@ -23,20 +17,14 @@
 			box-shadow: $tile-shadow;
 			background-color: $tile-background;
 			padding: $spacing-s;
-			.user-tile-value {
-        @include font-large-bold;
-			}
-			.user-tile-title {
-				font-size: $font-size-xs;
-			}
 		}
 	}
-  .attributes-container {
-    display: flex;
-		gap: $spacing-l;
-    align-items: center ;
-    margin: $spacing-s 0;
+	.attributes-container {
+		display: flex;
+		align-items: center;
+		margin: $spacing-s 0;
 		padding: $spacing-s;
 		width: 100%;
-  }
+		gap: $spacing-l;
+	}
 }

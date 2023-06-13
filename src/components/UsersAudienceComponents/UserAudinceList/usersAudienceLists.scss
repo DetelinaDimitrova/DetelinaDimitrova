@@ -1,0 +1,25 @@
+@import '../../../variables.scss';
+.user-audience-title-container {
+	margin: $spacing-l;
+	margin-bottom: 0px;
+	padding: $spacing-l;
+}
+.user-audience-details-container {
+	margin-left: $spacing-s;
+	padding: $spacing-s;
+	max-height: 100vh;
+	overflow: auto;
+	.user-audience-details {
+		cursor: pointer;
+		padding: $spacing-xs;
+	}
+	.active {
+		border: 1px solid $base-color;
+		border-radius: 4px;
+	}
+}
+.user-audience-details-container::-webkit-scrollbar {
+	border-radius: 4px;
+	background-color: $subtitle-color;
+	width: 3px;
+}

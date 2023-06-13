@@ -1,26 +1,48 @@
 @import './variables';
-
 html, body {
-  margin: 0;
-  padding: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: $font-size-s;
-  color: $subtitle-color;
+	margin: 0;
+	padding: 0;
+	color: $subtitle-color;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: $font-size-s;
 }
-
 p {
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
 }
-
 hr {
-  border-top: 1px solid $subtitle-color;
+	border-top: 1px solid $subtitle-color;
 }
-
 .content {
-  background-color: #fff;
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
-  width: 25%;
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+	background-color: #fff;
+	width: 25%;
 }
-
-*{box-sizing: border-box;}
+.flex-row-s {
+	width: 35%;
+}
+.flex-row-m {
+	width: 65%;
+}
+.font-weight-bold {
+	font-weight: bold;
+}
+.font-large {
+	color: $base-color;
+	font-size: $font-size-l;
+}
+.font-size-l {
+	font-size: $font-size-l;
+}
+.font-size-m {
+	font-size: $font-size-m;
+}
+.font-size-xs {
+	font-size: $font-size-xs;
+}
+.base-color {
+	color: $base-color;
+}
+* {
+	box-sizing: border-box;
+}
