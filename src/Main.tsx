@@ -4,7 +4,7 @@ import { Audiences } from './components/Audiences';
 const Main = () => {
   return (
     <Routes>
-      <Route path='/audiences' element={<Audiences />} />
+      <Route path='/' element={<Audiences />} />
     </Routes>
   );
 }
