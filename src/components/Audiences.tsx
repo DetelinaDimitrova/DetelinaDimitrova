@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { UserEntity, generateSampleData } from '../models/UsersEntity';
-import { UserEntityDetails } from './UsersAudienceComponents/UserEntityInfo/UserEntityDetails';
-import { UsersAudienceList } from './UsersAudienceComponents/UserAudinceList/UsersAudienceList';
+import { UserEntityDetails } from './UserEntityDetails/UserEntityDetails';
+import { UsersAudienceList } from './UserAudienceList/UsersAudienceList';
 import './audiences.scss'
 
 export const Audiences = () => {

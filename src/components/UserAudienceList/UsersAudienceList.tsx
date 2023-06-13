@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { UserEntity } from '../../../models/UsersEntity';
+import { UserEntity } from '../../models/UsersEntity';
 import './usersAudienceLists.scss'
 
 export const tableHeadTitle = 'Users in Audience';
@@ -9,11 +9,11 @@ export type Props = {
 }
 
 export const UsersAudienceList = ({ userEntities, setUserEntity }: Props) => {
-  const [active, setToggle] = useState<number>(-1);
+  const [active, setActive] = useState<number>(-1);
 
   const handleClick = (user: UserEntity, index: number) => {
     setUserEntity(user);
-    setToggle(index);
+    setActive(index);
   }
 
   return (
@@ -26,8 +26,8 @@ export const UsersAudienceList = ({ userEntities, setUserEntity }: Props) => {
         <hr />
         <div className="user-audience-details-container">
           {userEntities.map((user: UserEntity, index: number) => (
-            <div className={active !== index? "user-audience-details" : 'user-audience-details active'} key={index} onClick={() => handleClick(user, index)}>
-              <p>{user.id}</p>
+            <div key={index} className={active !== index? "user-audience-details" : 'user-audience-details active'} onClick={() => handleClick(user, index)}>
+              <p className='font-weight-bold base-color'>{user.id}</p>
               <p>{user.devices} Devices - {user.sessions.length} Sessions - {user.location}</p>
             </div>
           ))}

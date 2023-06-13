@@ -1,4 +1,4 @@
-import { UserEntity } from '../../../models/UsersEntity';
+import { UserEntity } from '../../models/UsersEntity';
 import Moment from 'react-moment';
 import './userEntityDetails.scss';
 
@@ -26,7 +26,7 @@ export const UserEntityDetails = ({ userEntity }: Props) => {
         <div className="user-tile-container">
           {params.map((param, index) => {
             return (
-              <div className="user-tile" key={index}>
+              <div key={`user-details-${index}`} className="user-tile">
                 <p className="font-size-xs">{param.key}</p>
                 <p className="font-size-l base-color font-weight-bold">{param.value}</p>
               </div>
@@ -43,16 +43,14 @@ export const UserEntityDetails = ({ userEntity }: Props) => {
               <hr />
             </div>
           </div>
-          {Object.keys(userEntity.attributes).map((key, value) => {
-              return (
-                <>
-                  <div className='attributes-container'>
-                    <div className='flex-row-s base-color'>{key} <hr /></div>
-                    <div className='flex-row-m base-color'>{userEntity.attributes[key]} <hr /></div>
-                  </div>
-                </>
-              )
-            })}
+          {Object.keys(userEntity.attributes).map((key, index) => {
+            return (
+              <div key={`user-attributes-${index}`} className='attributes-container'>
+                <div className='flex-row-s base-color'>{key} <hr /></div>
+                <div className='flex-row-m base-color'>{userEntity.attributes[key]} <hr /></div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </>
